@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+  padding: 10px 30px;
+  border: 1px solid black;
+}
+
+.logo {
+  width: 100px;
+}
+.nav-item {
+  display: flex;
+  list-style-type: none;
+}
+.nav-item li {
+  margin-left: 100px;
+  font-size: 20px;
+}

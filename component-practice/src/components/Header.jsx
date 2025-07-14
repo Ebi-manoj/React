@@ -1,7 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import { useState } from 'react';
 
-const Heading = () => {
+export const Heading = () => {
+  const [loginText, setLoginText] = useState('Sign In');
+  function changeText(text) {
+    const value = text == 'Sign In' ? 'Logout' : 'Sign In';
+    setLoginText(value);
+  }
   return (
     <div id="header">
       <div className="left">
@@ -16,18 +20,11 @@ const Heading = () => {
           <li>About</li>
           <li>Contact</li>
           <li>Cart</li>
-          <li>Sign In</li>
+          <li className="login-btn" onClick={() => changeText(loginText)}>
+            {loginText}
+          </li>
         </ul>
       </div>
     </div>
   );
 };
-
-const AppLayout = () => (
-  <div>
-    <Heading />
-  </div>
-);
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<AppLayout />);

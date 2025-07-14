@@ -1,6 +1,7 @@
 import { ResCard } from './Rescard';
 import { allResData } from '../utilities/constant';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export const Body = () => {
   const [listRes, setListRes] = useState(allResData);
@@ -33,7 +34,13 @@ export const Body = () => {
       </div>
       <div className="res-container">
         {listRes.map((data, index) => (
-          <ResCard key={index} resData={data} />
+          <Link
+            className="res-links"
+            to={`/restaurants/${index + 1}`}
+            key={index}
+          >
+            <ResCard resData={data} />
+          </Link>
         ))}
       </div>
     </div>

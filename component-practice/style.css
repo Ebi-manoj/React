@@ -87,3 +87,36 @@ img {
 .login-btn {
   cursor: pointer;
 }
+
+.resto {
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.resto h1 {
+  font-size: 60px;
+}
+.resto > * {
+  margin-bottom: 20px;
+}
+
+.menu-ul {
+  list-style-type: none;
+}
+
+.menu-ul li {
+  margin-bottom: 15px;
+}
+
+.nav-links {
+  text-decoration: none;
+  color: black;
+}
+
+.res-links {
+  text-decoration: none;
+  color: black;
+}

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-
+import { Link } from 'react-router-dom';
 export const Heading = () => {
   const [loginText, setLoginText] = useState('Sign In');
   function changeText(text) {
@@ -16,8 +16,12 @@ export const Heading = () => {
       </div>
       <div className="right">
         <ul className="nav-item">
-          <li>Home</li>
-          <li>About</li>
+          <Link className="nav-links" to={'/'}>
+            <li>Home</li>
+          </Link>
+          <Link className="nav-links" to={'/about'}>
+            <li>About</li>
+          </Link>
           <li>Contact</li>
           <li>Cart</li>
           <li className="login-btn" onClick={() => changeText(loginText)}>

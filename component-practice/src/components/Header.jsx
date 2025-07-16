@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import useOnlineStatus from '../utilities/useOnlineStatus';
 export const Heading = () => {
   const [loginText, setLoginText] = useState('Sign In');
   function changeText(text) {
@@ -27,6 +28,7 @@ export const Heading = () => {
           <li className="login-btn" onClick={() => changeText(loginText)}>
             {loginText}
           </li>
+          <li>Online:{useOnlineStatus() ? '✅' : '🔴'}</li>
         </ul>
       </div>
     </div>

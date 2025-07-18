@@ -23,7 +23,9 @@ export const Heading = () => {
           <Link className="nav-links" to={'/about'}>
             <li>About</li>
           </Link>
-          <li>Contact</li>
+          <Link className="nav-links" to={'/contact'}>
+            <li>Contact</li>
+          </Link>
           <li>Cart</li>
           <li className="login-btn" onClick={() => changeText(loginText)}>
             {loginText}

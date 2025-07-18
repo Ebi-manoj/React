@@ -9,3 +9,15 @@ export const ResCard = ({ resData }) => {
     </div>
   );
 };
+
+export const withPromoted = RestaurantCard => {
+  return props => {
+    console.log(props);
+    return (
+      <div>
+        <p className="promo">Promoted</p>
+        <RestaurantCard {...props} />
+      </div>
+    );
+  };
+};

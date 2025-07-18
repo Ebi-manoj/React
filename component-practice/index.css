@@ -1,3 +1,5 @@
+@import 'tailwindcss';
+
 * {
   margin: 0;
   padding: 0;
@@ -119,4 +121,12 @@ img {
 .res-links {
   text-decoration: none;
   color: black;
+}
+
+.promo {
+  position: absolute;
+  background-color: black;
+  padding: 2px;
+  color: white;
+  border-radius: 5px;
 }

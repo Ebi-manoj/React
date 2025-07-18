@@ -1,4 +1,4 @@
-import { ResCard } from './Rescard';
+import { ResCard, withPromoted } from './Rescard';
 import { allResData } from '../utilities/constant';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -13,6 +13,9 @@ export const Body = () => {
     );
     setListRes(filtered);
   }
+
+  const Promoted = withPromoted(ResCard);
+
   return (
     <div className="body">
       <div className="input-search">
@@ -39,7 +42,11 @@ export const Body = () => {
             to={`/restaurants/${index + 1}`}
             key={index}
           >
-            <ResCard resData={data} />
+            {data?.promoted ? (
+              <Promoted resData={data} />
+            ) : (
+              <ResCard resData={data} />
+            )}
           </Link>
         ))}
       </div>

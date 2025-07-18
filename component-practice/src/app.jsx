@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { Heading } from './components/Header';
 import { Body } from './components/Body';
+import { Contact } from './components/Contact';
 import { About } from './components/About';
 import { Restaurant } from './components/Restaurant';
 import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom';
@@ -25,6 +26,10 @@ const appRouter = createBrowserRouter([
       {
         path: '/about',
         element: <About />,
+      },
+      {
+        path: '/contact',
+        element: <Contact />,
       },
       {
         path: '/restaurants/:id',

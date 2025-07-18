@@ -9,6 +9,7 @@ export const allResData = [
     name: "Domino's Pizza",
     cuisine: 'Pizza, Pasta, Garlic Bread',
     rating: 4.2,
+    promoted: true,
     img: 'https://www.dominos.co.in/files/items/_1346164951.jpg',
   },
   {
@@ -182,5 +183,29 @@ export const restaurantDetails = [
       { item: 'Chocolate Sundae', price: 160 },
       { item: 'Mango Milkshake', price: 110 },
     ],
+  },
+];
+
+////////////////////////////////////////////////////////
+///FAQ
+export const faq = [
+  {
+    question: 'What is React?',
+    answer: 'React is a JavaScript library for building user interfaces.',
+  },
+  {
+    question: 'What is JSX?',
+    answer:
+      'JSX is a syntax extension for JavaScript that looks similar to HTML and is used in React to describe UI.',
+  },
+  {
+    question: 'What are components in React?',
+    answer:
+      'Components are reusable pieces of UI in React that can be functional or class-based.',
+  },
+  {
+    question: 'What is a state in React?',
+    answer:
+      'State is a built-in object that stores data that changes over time and affects what is rendered.',
   },
 ];

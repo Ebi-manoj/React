@@ -38,7 +38,7 @@ body {
   width: 50%;
   display: flex;
   justify-content: space-between;
-  margin-top: 20px;
+  margin: 20px 0px;
 }
 
 #buttons button {
@@ -49,4 +49,7 @@ body {
   color: white;
   font-size: 20px;
   cursor: pointer;
+}
+#error {
+  color: red;
 }

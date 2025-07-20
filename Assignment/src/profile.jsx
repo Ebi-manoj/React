@@ -21,7 +21,7 @@ export const Profile = () => {
   );
 };
 
-const ProfileCard = ({ data }) => {
+export const ProfileCard = ({ data }) => {
   return (
     <div id="profile-card">
       <h1>{data.name}</h1>

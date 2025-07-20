@@ -53,3 +53,35 @@ body {
 #error {
   color: red;
 }
+
+#stopwatch {
+  width: 300px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#stopwatch > * {
+  margin: 10px;
+}
+#controlls button {
+  margin: 0px 10px;
+  padding: 2px;
+}
+
+#input-element {
+  width: 350px;
+  border: 1px solid black;
+  padding: 20px;
+}
+
+#input-element > * {
+  margin-top: 10px;
+}
+#input-element input {
+  margin-right: 5px;
+}
+#input-element button {
+  margin-right: 5px;
+}

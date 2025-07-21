@@ -34,6 +34,12 @@ function App() {
     setTaskList([...filtered]);
   }
 
+  function editTask(id, content) {
+    const find = taskList.find(task => task.id == id);
+    find.task = content;
+    setTaskList([...taskList]);
+  }
+
   return (
     <div className="w-screen h-screen  bg-[#d6542c]  flex justify-center items-center flex-col">
       <div
@@ -67,6 +73,7 @@ function App() {
               data={task}
               toggle={toggle}
               deleteTask={deleteTask}
+              editTask={editTask}
             />
           ))}
         </ul>

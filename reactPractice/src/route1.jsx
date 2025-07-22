@@ -1,6 +1,7 @@
 import { Counter, CounterProvider } from './counterContext';
 import { Card } from './Hoc';
 import { Hoc } from './Hoc';
+import { Input } from './Practice';
 
 export const Route1 = () => {
   const HocCard = Hoc(Card);
@@ -10,6 +11,7 @@ export const Route1 = () => {
       <CounterProvider>
         <Counter />
         <HocCard data={'Ebi'} />
+        <Input />
       </CounterProvider>
     </div>
   );

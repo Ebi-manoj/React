@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 // export const Input = () => {
 //   const inputRef = useRef(null);
@@ -77,3 +78,30 @@ import { useEffect, useRef, useState } from 'react';
 //     </div>
 //   );
 // };
+
+// export const Input = () => {
+//   const navigate = useNavigate();
+
+//   return (
+//     <div>
+//       <button onClick={() => navigate('/about')}>Click about</button>
+//     </div>
+//   );
+// };
+
+export const Input = () => {
+  return (
+    <div>
+      <h1>This is Parent</h1>
+      <ChildInput data={'Ebi'} />
+    </div>
+  );
+};
+
+const ChildInput = ({ data }) => {
+  return (
+    <div>
+      <h1>This is Child {data}</h1>
+    </div>
+  );
+};

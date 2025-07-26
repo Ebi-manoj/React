@@ -4,6 +4,7 @@ import './index.css';
 import { About, App, Memo, ParentRef } from './App.jsx';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { Reducer, Reducer2 } from '../../reactPractice/src/Reducer.jsx';
+import { CallBack } from '../../reactPractice/src/useCallback.jsx';
 
 const appRouter = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ const appRouter = createBrowserRouter([
   {
     path: '/reducer',
     element: <Reducer2 />,
+  },
+  {
+    path: '/callback',
+    element: <CallBack />,
   },
 ]);
 

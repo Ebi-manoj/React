@@ -13,6 +13,7 @@ export const Header = () => {
       <li onClick={() => navigate('/memo')}>Memo</li>
       <li onClick={() => navigate('/ref')}>Ref</li>
       <li onClick={() => navigate('/reducer')}>Reducer</li>
+      <li onClick={() => navigate('/callback')}>CallBack</li>
     </div>
   );
 };

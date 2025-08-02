@@ -9,8 +9,8 @@ export function App() {
     <div id="app">
       {/* <Profile /> */}
       {/* <Counter /> */}
-      {/* <Stopwatch /> */}
-      <InputElement />
+      <Stopwatch />
+      {/* <InputElement /> */}
     </div>
   );
 }

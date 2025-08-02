@@ -1,12 +1,17 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import useOnlineStatus from '../utilities/useOnlineStatus';
+import { useSelector } from 'react-redux';
+
 export const Heading = () => {
   const [loginText, setLoginText] = useState('Sign In');
   function changeText(text) {
     const value = text == 'Sign In' ? 'Logout' : 'Sign In';
     setLoginText(value);
   }
+
+  const items = useSelector(store => store.cart.items);
+
   return (
     <div id="header">
       <div className="left">
@@ -18,19 +23,27 @@ export const Heading = () => {
       <div className="right">
         <ul className="nav-item">
           <Link className="nav-links" to={'/'}>
-            <li>Home</li>
+            <li className="cursor-pointer">Home</li>
           </Link>
           <Link className="nav-links" to={'/about'}>
-            <li>About</li>
+            <li className="cursor-pointer">About</li>
           </Link>
           <Link className="nav-links" to={'/contact'}>
-            <li>Contact</li>
+            <li className="cursor-pointer">Contact</li>
           </Link>
-          <li>Cart</li>
-          <li className="login-btn" onClick={() => changeText(loginText)}>
+          <Link className="nav-links" to={'/cart'}>
+            <li className="cursor-pointer">Cart({items.length})</li>
+          </Link>
+
+          <li
+            className="login-btn cursor-pointer"
+            onClick={() => changeText(loginText)}
+          >
             {loginText}
           </li>
-          <li>Online:{useOnlineStatus() ? '✅' : '🔴'}</li>
+          <li className="cursor-pointer">
+            Online:{useOnlineStatus() ? '✅' : '🔴'}
+          </li>
         </ul>
       </div>
     </div>
